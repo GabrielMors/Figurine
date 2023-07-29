@@ -11,13 +11,15 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            FiguraDetalheView()
+            NavigationView {
+                FigurasView()
+            }
                 .tabItem {
                     Label("Figuras", systemImage: "face.smiling")
                 }
             FiguraDetalheView()
                 .tabItem {
-                    Label("Figuras", systemImage: "face.dashed")
+                    Label("Minha coleção", systemImage: "face.dashed")
                 }
         }
             
