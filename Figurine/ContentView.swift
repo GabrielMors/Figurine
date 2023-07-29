@@ -32,28 +32,8 @@ struct ContentView: View {
                     .frame(width: 120)
                 
                 VStack(alignment: .leading) {
-                    HStack {
-                        Image(systemName: "lifepreserver")
-                            .foregroundColor(Color.green)
-                            .frame(width: 30)
-                            .font(.system(size: 30))
-                        
-                        Text("Vidas: ")
-                        
-                        Text("2")
-                            .padding(.trailing)
-                    }
-                    
-                    HStack {
-                        Image(systemName: "bolt")
-                            .foregroundColor(Color.yellow)
-                            .frame(width: 30)
-                            .font(.system(size: 30))
-                        
-                        Text("Potência: ")
-                        
-                        Text("60%")
-                    }
+                    PropriedadesView()
+                    PropriedadesView(imagem: "bolt", color: Color.yellow, nome: "Potência:", valor: "60%")
                 }
             }
             .padding()
@@ -87,9 +67,9 @@ struct ContentView: View {
                             .cornerRadius(/*@START_MENU_TOKEN@*/30.0/*@END_MENU_TOKEN@*/)
                             .foregroundColor(.white)
                     }
-                    
                 }
                 Spacer()
+                
             }.padding()
             
         }

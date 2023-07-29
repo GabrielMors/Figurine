@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4B0E8C32A758B0000651564 /* PropriedadesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B0E8C22A758B0000651564 /* PropriedadesView.swift */; };
 		C4D38A742A747EAE0080716C /* FigurineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D38A732A747EAE0080716C /* FigurineApp.swift */; };
 		C4D38A762A747EAE0080716C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D38A752A747EAE0080716C /* ContentView.swift */; };
 		C4D38A782A747EB00080716C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D38A772A747EB00080716C /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C4B0E8C22A758B0000651564 /* PropriedadesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropriedadesView.swift; sourceTree = "<group>"; };
 		C4D38A702A747EAE0080716C /* Figurine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Figurine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D38A732A747EAE0080716C /* FigurineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigurineApp.swift; sourceTree = "<group>"; };
 		C4D38A752A747EAE0080716C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				C4D38A732A747EAE0080716C /* FigurineApp.swift */,
 				C4D38A752A747EAE0080716C /* ContentView.swift */,
+				C4B0E8C22A758B0000651564 /* PropriedadesView.swift */,
 				C4D38A772A747EB00080716C /* Assets.xcassets */,
 				C4D38A792A747EB00080716C /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B0E8C32A758B0000651564 /* PropriedadesView.swift in Sources */,
 				C4D38A762A747EAE0080716C /* ContentView.swift in Sources */,
 				C4D38A742A747EAE0080716C /* FigurineApp.swift in Sources */,
 			);
