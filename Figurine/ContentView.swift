@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var itensNaColecao: Int = 0
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Mingle")
@@ -66,12 +69,13 @@ struct ContentView: View {
             HStack() {
                 Spacer()
                 Button {
-                    // Ação do botão
+                    itensNaColecao += 1
                 } label: {
-                    Text("Na sua coleção: 2")
+                    Text("Na sua coleção: \(itensNaColecao)")
                         .padding()
                         .background(.green)
                         .cornerRadius(/*@START_MENU_TOKEN@*/30.0/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(.white)
                 }
                 Spacer()
             }.padding()
