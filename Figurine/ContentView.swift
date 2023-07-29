@@ -36,7 +36,7 @@ struct ContentView: View {
                             .font(.system(size: 30))
                         
                         Text("Vidas: ")
-
+                        
                         Text("2")
                             .padding(.trailing)
                     }
@@ -55,10 +55,27 @@ struct ContentView: View {
             }
             .padding()
             
-            HStack(alignment: .center) {
+            HStack {
+                Spacer()
                 Text("O Mingle se destaca por fazer o dobro do trabalho na metade do tempo, com extrema precisão. Essas habilidades são úteis para ela em sua função de Analista de Dados Sênior para uma empresa internacional de computação em nuvem. Ela também tem uma propensão para dança de salão, dança de linha e praticamente qualquer tipo de atividade que a deixe dançar ao som da música.")
+                Spacer()
             }
+            
             Spacer()
+            
+            HStack() {
+                Spacer()
+                Button {
+                    // Ação do botão
+                } label: {
+                    Text("Na sua coleção: 2")
+                        .padding()
+                        .background(.green)
+                        .cornerRadius(/*@START_MENU_TOKEN@*/30.0/*@END_MENU_TOKEN@*/)
+                }
+                Spacer()
+            }.padding()
+            
         }
     }
 }
