@@ -13,7 +13,7 @@ struct FigurasView: View {
     
     var body: some View {
         List(figuras) { figura in
-            NavigationLink(destination: FiguraDetalheView()) {
+            NavigationLink(destination: FiguraDetalheView(figura: figura)) {
                 HStack {
                     Image(figura.imagem+"_p")
                         .resizable()
@@ -23,17 +23,9 @@ struct FigurasView: View {
                         .containerShape(Circle())
                     Text(figura.nome)
                 }
-                
             }
         }
-        //            Button {
-        //                apresentado = true
-        //            } label: {
-        //                Text(figura)
-        //            }
-        //            .sheet(isPresented: $apresentado) {
-        //                FiguraDetalheView()
-        //            }
+        .navigationTitle("Figuras")
     }
 }
 
