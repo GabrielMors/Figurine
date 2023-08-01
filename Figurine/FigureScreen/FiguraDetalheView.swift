@@ -29,8 +29,10 @@ struct FiguraDetalheView: View {
                     .frame(width: 120)
                 
                 VStack(alignment: .leading) {
-                    PropriedadesView()
-                    PropriedadesView(imagem: "bolt", color: Color.yellow, nome: "Potência:", valor: "60%")
+                    
+                    PropriedadesView(valorInt: figura.vidas, tipo: .numeorInteiro)
+                    
+                    PropriedadesView(imagem: "bolt", color: .yellow, nome: "Potência", valorDescimal: figura.potencia, tipo: .numeroDecimal)
                 }
             }
             .padding()

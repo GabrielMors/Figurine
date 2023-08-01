@@ -7,12 +7,21 @@
 
 import SwiftUI
 
+enum TipoPropriedade {
+    case numeorInteiro
+    case numeroDecimal
+    case texto
+}
+
 struct PropriedadesView: View {
     
-    var imagem = "lifepreserver"
-    var color = Color.green
-    var nome = "Vidas:"
-    var valor = "2"
+    var imagem: String = "lifepreserver"
+    var color: Color = .green
+    var nome: String = "Vidas:"
+    var valor: String = "0.4"
+    var valorInt: Int = 1
+    var valorDescimal: Double = 1.0
+    var tipo: TipoPropriedade = .numeorInteiro
     
     @State var apresentado = false
     
@@ -27,10 +36,21 @@ struct PropriedadesView: View {
                     .font(.system(size: 30))
                 
                 Text(nome)
+                if tipo == .texto {
+                    Text(valor)
+                        .padding(.trailing)
+                }
+                if tipo == .numeorInteiro {
+                    Text("\(valorInt)")
+                        .padding(.trailing)
+                }
                 
-                Text(valor)
-                    .padding(.trailing)
-            }
+                if tipo == .numeroDecimal {
+                    Text("\(valorDescimal * 100, specifier: "%.0f")%")
+                        .padding(.trailing)
+
+                }
+                            }
             .sheet(isPresented: $apresentado) {
                 PropriedadeEditarView()
             }
