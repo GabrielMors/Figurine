@@ -10,7 +10,7 @@ import SwiftUI
 struct FiguraDetalheView: View {
     
     @State var itensNaColecao: Int = 0
-    var figura: Figura
+    @ObservedObject var figura: Figura
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -30,9 +30,9 @@ struct FiguraDetalheView: View {
                 
                 VStack(alignment: .leading) {
                     
-                    PropriedadesView(valorInt: figura.vidas, tipo: .numeroInteiro)
+                    PropriedadesView(valor: .constant(""), valorInt: $figura.vidas, valorDescimal: .constant(0), tipo: .numeroInteiro)
                     
-                    PropriedadesView(imagem: "bolt", color: .yellow, nome: "Potência", valorDescimal: figura.potencia, tipo: .numeroDecimal)
+                    PropriedadesView(imagem: "bolt", nome: "Potência", valor: .constant(""), valorInt: .constant(0), valorDescimal: $figura.potencia, color: .yellow, tipo: .numeroDecimal)
                 }
             }
             .padding()

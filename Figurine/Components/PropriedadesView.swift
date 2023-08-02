@@ -16,11 +16,11 @@ enum TipoPropriedade {
 struct PropriedadesView: View {
     
     var imagem: String = "lifepreserver"
-    var color: Color = .green
     var nome: String = "Vidas:"
-    @State var valor: String = "0.4"
-    @State var valorInt: Int = 1
-    @State var valorDescimal: Double = 1.0
+    @Binding var valor: String
+    @Binding var valorInt: Int
+    @Binding var valorDescimal: Double
+    var color: Color = .green
     var tipo: TipoPropriedade = .numeroInteiro
     
     @State var apresentado = false
@@ -60,6 +60,6 @@ struct PropriedadesView: View {
 
 struct PropriedadesView_Previews: PreviewProvider {
     static var previews: some View {
-        PropriedadesView()
+        PropriedadesView(valor: .constant(""), valorInt: .constant(0), valorDescimal: .constant(0))
     }
 }
