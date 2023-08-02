@@ -30,7 +30,7 @@ struct FiguraDetalheView: View {
                 
                 VStack(alignment: .leading) {
                     
-                    PropriedadesView(valorInt: figura.vidas, tipo: .numeorInteiro)
+                    PropriedadesView(valorInt: figura.vidas, tipo: .numeroInteiro)
                     
                     PropriedadesView(imagem: "bolt", color: .yellow, nome: "Potência", valorDescimal: figura.potencia, tipo: .numeroDecimal)
                 }

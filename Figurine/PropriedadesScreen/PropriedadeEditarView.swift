@@ -8,13 +8,32 @@
 import SwiftUI
 
 struct PropriedadeEditarView: View {
+    
+    @Binding var valor: String
+    @Binding var valorInt: Int
+    @Binding var valorDescimal: Double
+    var tipo: TipoPropriedade = .numeroInteiro
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if tipo == .numeroInteiro {
+                Stepper("Valor atual: \(valorInt)", value: $valorInt)
+            }
+            if tipo == .numeroDecimal {
+                Text("Valor atual: \(valorDescimal * 100, specifier: "%.0f")%")
+                Slider(value: $valorDescimal)
+            }
+            if tipo == .texto {
+                TextEditor(text: $valor)
+            }
+            Spacer()
+        }
+        .padding()
     }
 }
 
 struct PropriedadeEditarView_Previews: PreviewProvider {
     static var previews: some View {
-        PropriedadeEditarView()
+        PropriedadeEditarView(valor: .constant(""), valorInt: .constant(0), valorDescimal: .constant(1.0), tipo: .numeroDecimal)
     }
 }

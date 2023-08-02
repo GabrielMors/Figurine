@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum TipoPropriedade {
-    case numeorInteiro
+    case numeroInteiro
     case numeroDecimal
     case texto
 }
@@ -18,10 +18,10 @@ struct PropriedadesView: View {
     var imagem: String = "lifepreserver"
     var color: Color = .green
     var nome: String = "Vidas:"
-    var valor: String = "0.4"
-    var valorInt: Int = 1
-    var valorDescimal: Double = 1.0
-    var tipo: TipoPropriedade = .numeorInteiro
+    @State var valor: String = "0.4"
+    @State var valorInt: Int = 1
+    @State var valorDescimal: Double = 1.0
+    var tipo: TipoPropriedade = .numeroInteiro
     
     @State var apresentado = false
     
@@ -40,7 +40,7 @@ struct PropriedadesView: View {
                     Text(valor)
                         .padding(.trailing)
                 }
-                if tipo == .numeorInteiro {
+                if tipo == .numeroInteiro {
                     Text("\(valorInt)")
                         .padding(.trailing)
                 }
@@ -52,7 +52,7 @@ struct PropriedadesView: View {
                 }
                             }
             .sheet(isPresented: $apresentado) {
-                PropriedadeEditarView()
+                PropriedadeEditarView(valor: $valor, valorInt: $valorInt, valorDescimal: $valorDescimal, tipo: tipo)
             }
         }
     }
