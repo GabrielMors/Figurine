@@ -14,15 +14,17 @@ struct ContentView: View {
             NavigationView {
                 FigurasView()
             }
-                .tabItem {
-                    Label("Figuras", systemImage: "face.smiling")
-                }
-            FiguraDetalheView(figura: figuras[0])
-                .tabItem {
-                    Label("Minha coleção", systemImage: "face.dashed")
-                }
+            .tabItem {
+                Label("Figuras", systemImage: "face.smiling")
+            }
+            NavigationView {
+                MinhaColecaoView()
+            }
+            .tabItem {
+                Label("Minha coleção", systemImage: "face.dashed")
+            }
         }
-            
+        
     }
 }
 
