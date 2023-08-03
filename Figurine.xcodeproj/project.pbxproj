@@ -54,6 +54,7 @@
 			children = (
 				C4B0E8CB2A75952700651564 /* PropriedadeEditarView.swift */,
 				C4B0E8C22A758B0000651564 /* PropriedadesView.swift */,
+				C40FADA62A7B5A300074A4F9 /* FigurasLinhaView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -63,7 +64,6 @@
 			children = (
 				C4B0E8C42A758D7100651564 /* FiguraDetalheView.swift */,
 				C4B0E8C92A758F7E00651564 /* FigurasView.swift */,
-				C40FADA62A7B5A300074A4F9 /* FigurasLinhaView.swift */,
 			);
 			path = FigureScreen;
 			sourceTree = "<group>";

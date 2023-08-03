@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct MinhaColecaoView: View {
-    
     @EnvironmentObject var minhaColecao: MinhaColecao
-    
     var body: some View {
         if minhaColecao.figuras.count == 0 {
             Text("Você não tem figuras na sua coleção")
@@ -21,7 +19,10 @@ struct MinhaColecaoView: View {
                 } label: {
                     FigurasLinhaView(figura: figura, cor: .green)
                 }
+
+                
             }
+            .navigationTitle("Minha coleção")
         }
     }
 }

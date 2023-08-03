@@ -14,28 +14,30 @@ struct FiguraDetalheView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            
+                        
             HStack {
-                Text("Frase:")
+                
+                Text("Frase: ")
                     .bold()
-                Text(figura.frase)
+                    .padding(.leading)
+                
+                Text("\"\(figura.frase)\"")
             }
-            .padding(.leading)
             
             HStack {
+                
                 Image(figura.imagem)
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 120)
+                    .frame(width: 75)
                 
                 VStack(alignment: .leading) {
-                    
-                    PropriedadesView(valor: .constant(""), valorInt: $figura.vidas, valorDescimal: .constant(0), tipo: .numeroInteiro)
-                    
-                    PropriedadesView(imagem: "bolt", nome: "Potência", valor: .constant(""), valorInt: .constant(0), valorDescimal: $figura.potencia, color: .yellow, tipo: .numeroDecimal)
+                    PropriedadesView(valor: .constant(""), valorInt: $figura.vidas, valorDecimal: .constant(0), tipo: .numeroInteiro)
+                    PropriedadesView(imagem: "bolt", nome: "Potência", valor: .constant(""), valorInt: .constant(0), valorDecimal: $figura.potencia, cor: .yellow, tipo: .numeroDecimal)
+//                    ProprieadesView(imagem: "circle", nome: "Teste", valor: "isso é um teste", cor: .purple, tipo: .texto)
                 }
             }
-            .padding()
+            .padding(30)
             
             HStack {
                 Spacer()
@@ -47,7 +49,7 @@ struct FiguraDetalheView: View {
             
             Spacer()
             
-            HStack() {
+            HStack {
                 Spacer()
                 Button {
                     minhaColecao.figuras.append(figura)
@@ -55,23 +57,22 @@ struct FiguraDetalheView: View {
                 } label: {
                     
                     if minhaColecao.figuras.count == 0 {
-                        Text("Adicionar á coleção")
+                        Text("Adicionar à coleção")
                             .padding()
-                            .background(.gray)
-                            .cornerRadius(30)
+                            .background(.blue)
                             .foregroundColor(.white)
                     } else {
                         Text("Na sua coleção: \(minhaColecao.figuras.count)")
                             .padding()
                             .background(.green)
-                            .cornerRadius(/*@START_MENU_TOKEN@*/30.0/*@END_MENU_TOKEN@*/)
                             .foregroundColor(.white)
                     }
                 }
+                .cornerRadius(30)
+                .padding()
+                            
                 Spacer()
-                
             }.padding()
-            
         }
         .navigationTitle(
             Text(figura.nome)
