@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+
     var body: some View {
         TabView {
             NavigationView {
@@ -21,10 +21,9 @@ struct ContentView: View {
                 MinhaColecaoView()
             }
             .tabItem {
-                Label("Minha coleção", systemImage: "face.dashed")
+                Label("Minha Coleção", systemImage: "face.dashed")
             }
         }
-        
     }
 }
 
@@ -33,3 +32,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+

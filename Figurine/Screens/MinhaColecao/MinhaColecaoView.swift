@@ -16,7 +16,11 @@ struct MinhaColecaoView: View {
             Text("Você não tem figuras na sua coleção")
         } else {
             List(minhaColecao.figuras) { figura in
-                Text(figura.nome)
+                NavigationLink {
+                    FiguraDetalheView(figura: figura)
+                } label: {
+                    FigurasLinhaView(figura: figura, cor: .green)
+                }
             }
         }
     }

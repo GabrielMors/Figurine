@@ -9,7 +9,6 @@ import SwiftUI
 
 struct FiguraDetalheView: View {
     
-//    @State var itensNaColecao: Int = 0
     @ObservedObject var figura: Figura
     @EnvironmentObject var minhaColecao: MinhaColecao
     

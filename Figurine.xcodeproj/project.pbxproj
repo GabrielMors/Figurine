@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C40FADA72A7B5A300074A4F9 /* FigurasLinhaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40FADA62A7B5A300074A4F9 /* FigurasLinhaView.swift */; };
 		C4B0E8C32A758B0000651564 /* PropriedadesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B0E8C22A758B0000651564 /* PropriedadesView.swift */; };
 		C4B0E8C52A758D7200651564 /* FiguraDetalheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B0E8C42A758D7100651564 /* FiguraDetalheView.swift */; };
 		C4B0E8CA2A758F7E00651564 /* FigurasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B0E8C92A758F7E00651564 /* FigurasView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C40FADA62A7B5A300074A4F9 /* FigurasLinhaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigurasLinhaView.swift; sourceTree = "<group>"; };
 		C4B0E8C22A758B0000651564 /* PropriedadesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropriedadesView.swift; sourceTree = "<group>"; };
 		C4B0E8C42A758D7100651564 /* FiguraDetalheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiguraDetalheView.swift; sourceTree = "<group>"; };
 		C4B0E8C92A758F7E00651564 /* FigurasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigurasView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				C4B0E8C42A758D7100651564 /* FiguraDetalheView.swift */,
 				C4B0E8C92A758F7E00651564 /* FigurasView.swift */,
+				C40FADA62A7B5A300074A4F9 /* FigurasLinhaView.swift */,
 			);
 			path = FigureScreen;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				C4D38A742A747EAE0080716C /* FigurineApp.swift in Sources */,
 				C4C74E562A77C558009A8EC2 /* ModeloDados.swift in Sources */,
 				C4B0E8CC2A75952700651564 /* PropriedadeEditarView.swift in Sources */,
+				C40FADA72A7B5A300074A4F9 /* FigurasLinhaView.swift in Sources */,
 				C4C74E742A7ABB49009A8EC2 /* MinhaColecaoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
