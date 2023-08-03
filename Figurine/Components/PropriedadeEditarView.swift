@@ -15,6 +15,7 @@ struct PropriedadeEditarView: View {
     var tipo: TipoPropriedade = .numeroDecimal
     @Binding var apresentado: Bool
     @State var valorSlider: Double = 0
+    @State var valorStepper: Int = 1
     
     var body: some View {
         VStack {
@@ -28,8 +29,10 @@ struct PropriedadeEditarView: View {
             if tipo == .texto {
                 TextEditor(text: $valor)
             }
-            Button("Salvar") {
+            Button {
                 apresentado = false
+            } label: {
+                Text("Salvar")
             }
             .padding()
             .frame(maxWidth: .infinity)
@@ -37,9 +40,7 @@ struct PropriedadeEditarView: View {
             .foregroundColor(.white)
             .cornerRadius(30)
             DatePicker(selection: .constant(Date()), label: { Text("Date") })
-            Stepper(value: $valorSlider, in: 0...10) {
-                Text("Slider")
-            }
+            Stepper("Contador \(valorStepper)", value: $valorStepper, in: 0...10 )
             RoundedRectangle(cornerRadius: 10)
                 .foregroundColor(.gray)
                 

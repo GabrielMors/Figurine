@@ -34,7 +34,7 @@ struct FiguraDetalheView: View {
                 VStack(alignment: .leading) {
                     PropriedadesView(valor: .constant(""), valorInt: $figura.vidas, valorDecimal: .constant(0), tipo: .numeroInteiro)
                     PropriedadesView(imagem: "bolt", nome: "Potência", valor: .constant(""), valorInt: .constant(0), valorDecimal: $figura.potencia, cor: .yellow, tipo: .numeroDecimal)
-//                    ProprieadesView(imagem: "circle", nome: "Teste", valor: "isso é um teste", cor: .purple, tipo: .texto)
+
                 }
             }
             .padding(30)
