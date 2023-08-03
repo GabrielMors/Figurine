@@ -15,13 +15,13 @@ struct ContentView: View {
                 FigurasView()
             }
             .tabItem {
-                Label("Figuras", systemImage: "face.smiling")
+                Label("figuras", systemImage: "face.smiling")
             }
             NavigationView {
                 MinhaColecaoView()
             }
             .tabItem {
-                Label("Minha Coleção", systemImage: "face.dashed")
+                Label("minha-colecao", systemImage: "face.dashed")
             }
         }
     }

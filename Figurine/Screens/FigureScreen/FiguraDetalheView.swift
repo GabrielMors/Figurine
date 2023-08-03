@@ -51,6 +51,7 @@ struct FiguraDetalheView: View {
                 Spacer()
                 Button {
                     minhaColecao.figuras.append(figura)
+                    minhaColecao.salvar()
                 } label: {
                     
                     if minhaColecao.figuras.count == 0 {
