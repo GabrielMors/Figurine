@@ -41,7 +41,7 @@ struct PropriedadeEditarView: View {
                 Text("Slider")
             }
             RoundedRectangle(cornerRadius: 10)
-                .foregroundColor(.red)
+                .foregroundColor(.gray)
                 
             Spacer()
         }
